@@ -27,7 +27,17 @@ class Solutionn {
             //join the sorted array into a new string 
             String key=new String(arr);
 
+            //if map has the key, adds to it
+            if (map.containsKey(key)){
+                map.get(key).add(s);
+            }else{  //else creates a new list and adds s
+                List<String> newList=new ArrayList<>();
+                newList.add(s);
+                map.put(key, newList);
+            }
+
         }
+        return map.values();
         
     }
 }
