@@ -37,7 +37,7 @@ class Solutionn {
             }
 
         }
-        return map.values();
+        return new ArrayList<>(map.values());
         
     }
 }
